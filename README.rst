@@ -129,6 +129,19 @@ OSX
 Unfortunately there is no pcraster build for osx yet. If anybody wants to pick this up please let
 the guys at pcraster.eu know!
 
+Running wflow_sbm from docker
+=============================
+
+To run the above from the docker container, get the docker image by either installing docker and running ``docker
+buid .`` in your local repository directory. Alternatively, download the image from docker hub by typing
+
++ docker pull ewatercycle/wflow
+
+After obtaining the docker image, run it by typing
+
++ docker run -v <path-to-data>:/data ewatercycle/wflow -R testing
+
+This will create a (root-owned) subdirectory 'testing' in your data path with the model output.
 
 Credits
 =======
