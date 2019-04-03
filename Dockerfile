@@ -1,12 +1,20 @@
 # DockerFile for PCR-GLOB model. The ini-file should be mounted as config.ini,
 # the input data root directory should be mounted as /data
-FROM ewatercycle/pcraster-container:latest
+FROM ewatercycle/pcraster-container:421
 MAINTAINER Gijs van den Oord <g.vandenoord@esciencecenter.nl>
+RUN apt-get update -y
+
+# INSTALL compilers and build toold
+RUN apt-get install -y python3-setuptools python3-pip python3-gdal
+
+# INSTALL pip packages
+RUN pip3 install numba
+
+# build
 COPY . /opt/wflow/
-RUN pip install netCDF4 gdal pyproj matplotlib scipy
-WORKDIR /opt/wflow/wflow-py
-RUN python setup.py install
+WORKDIR /opt/wflow
+RUN python3 setup.py install
 VOLUME /data
-ENV PYTHONPATH /usr/local/python/
+ENV PYTHONPATH /opt/pcraster/python/
 WORKDIR /
-ENTRYPOINT ["python","/usr/local/bin/wflow_sbm.py","-C","/data"]
+ENTRYPOINT ["python3","/usr/local/bin/wflow_sbm.py","-C","/data"]
