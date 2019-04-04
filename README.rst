@@ -143,6 +143,20 @@ To check it the install is successful, go to the examples directory and run the 
 This should run without errors.
 
 
+Running wflow_sbm from Docker
+-----------------------------
+
+To run the above from the Docker container, get the Docker image by either installing Docker and running ``docker
+buid .`` in your local repository directory. Alternatively, download the image from Docker hub by typing
+
++ docker pull ewatercycle/wflow
+
+After obtaining the Docker image, run it by typing
+
++ docker run -v <path-to-data>:/data ewatercycle/wflow -R testing
+
+This will create a (root-owned) subdirectory 'testing' in your data path with the sbm model output.
+
 Credits
 =======
 
