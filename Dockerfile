@@ -9,7 +9,7 @@ RUN apt-get update -y
 RUN apt-get install -y python3-setuptools python3-pip python3-gdal
 
 # INSTALL pip packages
-RUN pip3 install numba
+RUN pip3 install -U numba numpy>=1.14
 
 # build
 COPY . /opt/wflow/
