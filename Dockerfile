@@ -13,4 +13,4 @@ WORKDIR /opt/wflow
 RUN python3 setup.py install
 VOLUME /data
 WORKDIR /
-ENTRYPOINT ["python3","/usr/local/bin/wflow_sbm.py","-C","/data"]
+ENTRYPOINT ["python3","/opt/conda/bin/wflow_sbm.py","-C","/data"]
