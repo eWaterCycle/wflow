@@ -1009,6 +1009,15 @@ class wflowbmi_csdms(bmi.Bmi):
         self.bmilogger.debug("get_var_nbytes: " + str(npmap.size * npmap.itemsize))
         return npmap.size * npmap.itemsize
 
+    def get_var_grid(self, long_var_name):
+        """
+        Gets the grid identifier for a given variable.
+
+        :var  String long_var_name: identifier of a variable in the model:
+        :return: The grid identifier the variable is located on
+        """
+        return 0
+
     def get_start_time(self):
         """
         Gets the start time of the model.
