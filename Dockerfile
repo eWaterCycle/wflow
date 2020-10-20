@@ -6,7 +6,7 @@ MAINTAINER Willem van Verseveld <Willem.vanVerseveld@deltares.nl>
 RUN apt-get update -y
 
 # INSTALL compilers and build toold
-RUN apt-get install -y python3-setuptools python3-pip python3-gdal
+RUN apt-get install -y python3-setuptools python3-pip python3-gdal llvm
 
 # INSTALL pip packages
 RUN pip3 install numba
