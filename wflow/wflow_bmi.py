@@ -1178,7 +1178,7 @@ class wflowbmi_csdms(bmi.Bmi):
         """
         Get the grid type according to the enumeration in BmiGridType
 
-        :var String grid_id: identifier of a grid in the model.
+        :var Integer grid_id: identifier of a grid in the model.
 
         :return: BmiGridType type of the grid geometry of the given grid.
         """
@@ -1227,7 +1227,7 @@ class wflowbmi_csdms(bmi.Bmi):
         """
         gets the origin of the model grid.
 
-        :var String grid_id: identifier of a grid in the model.
+        :var Integer grid_id: identifier of a grid in the model.
 
         :return: X, Y: ,the lower left corner of the grid.
         """
@@ -1246,7 +1246,7 @@ class wflowbmi_csdms(bmi.Bmi):
         """
         Give X coordinates of point in the model grid
 
-        :var String grid_id: identifier of a grid in the model.
+        :var Integer grid_id: identifier of a grid in the model.
 
         :return: Numpy array of doubles: x coordinate of grid cell center for each grid cell, in the same order as the
         values returned by function get_value.
@@ -1258,7 +1258,7 @@ class wflowbmi_csdms(bmi.Bmi):
         """
         Give Y coordinates of point in the model grid
 
-        :var String grid_id: identifier of a grid in the model.
+        :var Integer grid_id: identifier of a grid in the model.
 
         :return: Numpy array of doubles: y coordinate of grid cell center for each grid cell, in the same order as the
         values returned by function get_value.
@@ -1271,7 +1271,7 @@ class wflowbmi_csdms(bmi.Bmi):
         """
         Give Z coordinates of point in the model grid
 
-        :var String grid_id: identifier of a grid in the model.
+        :var Integer grid_id: identifier of a grid in the model.
 
         :return: Numpy array of doubles: z coordinate of grid cell center for each grid cell, in the same order as the values returned by function get_value.
         """
